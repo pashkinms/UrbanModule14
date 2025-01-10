@@ -23,7 +23,7 @@ def set_all_products():
                    'Много не пить - можно отравиться']
     for i in range(1, 5):
         cursor.execute('INSERT INTO Products (title, description, price) VALUES (?, ?, ?)',
-                       (f'Product{i}',f'{description[i]}', f'{i * 100}'))
+                       (f'Микстура {i}',f'{description[i]}', f'{i * 100}'))
     
     connection.commit()
     connection.close()    
