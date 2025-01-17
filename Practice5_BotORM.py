@@ -81,6 +81,7 @@ async def set_age(message, state):
     data = await state.get_data()
     crud_functions.add_user(data['username'], data['email'], data['age'])
     await state.finish()
+    await message.answer('Регистрация прошла успешно')
     
 @dp.message_handler(text='Buy')
 async def get_buying_list(message):
